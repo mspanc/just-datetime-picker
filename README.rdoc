@@ -78,6 +78,8 @@ Once you have the source, you can unpack it and use from wherever you downloaded
 
 == Assets
 
+=== CSS
+
 You can try to run rails g just:date_time:install to install default CSS, 
 but I found that method sometimes does not work. 
 
@@ -99,6 +101,16 @@ In such case, just append the following code to your CSS stylesheet:
     margin-left: 1ex;
   }
 
+=== JavaScript
+
+If you use nested set and dynamically create date or date/time pickers,
+they {won't be active by default due to bug in Active Admin}[https://github.com/sferik/rails_admin/issues/1309].
+
+You can use following script to overcome that problem:
+
+  $('a.button').live('click', function() {
+    $('input.datepicker:not(.hasDatepicker)').datepicker();
+  });
 
 = Additional info
 
