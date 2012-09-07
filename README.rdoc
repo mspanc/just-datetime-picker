@@ -47,12 +47,6 @@ That should create nice date/time picker for User#born_at.
 
 == Code itself
 
-=== Ruby Versions
-
-Code was tested with ruby-1.9.3-p194 [ amd64 ] under RVM.
-
-It was tested with ActiveAdmin[http://www.activeadmin.info] 0.5.0 and formtastic[https://github.com/justinfrench/formtastic] 2.2.1.
-
 === Gems
 
 The gems are hosted at Rubygems.org[http://rubygems.org]. Make sure you're
@@ -101,6 +95,18 @@ the following to your CSS:
   .input.just_datetime_picker input.just-datetime-picker-time-minute {
     margin-left: 1ex;
   }
+
+
+= Additional info
+
+== Versions known to work
+
+Code was tested with:
+
+* ruby 1.9.3-p194 [ amd64 ] under RVM,
+* ActiveAdmin[http://www.activeadmin.info] 0.5.0, 
+* formtastic[https://github.com/justinfrench/formtastic] 2.2.1,
+* (Ruby on Rails)[http://www.rubyonrails.org] 3.2.8.
 
 = ChangeLog
 
