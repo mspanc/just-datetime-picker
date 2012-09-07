@@ -79,8 +79,9 @@ Once you have the source, you can unpack it and use from wherever you downloaded
 == Assets
 
 You can try to run rails g just:date_time:install to install default CSS, 
-but I found that methods sometimes does not work. In such case, just append
-the following to your CSS:
+but I found that method sometimes does not work. 
+
+In such case, just append the following code to your CSS stylesheet:
 
   .input.just_datetime_picker input.just-datetime-picker-field {
     width: auto !important;
