@@ -14,13 +14,18 @@ Jeweler::Tasks.new do |s|
      "LICENSE", 
      "lib/", 
      "lib/just-datetime-picker.rb", 
-     "lib/locales/",
-     "lib/locales/pl.yml",
-     "lib/locales/en.yml",
+     "lib/just-datetime-picker/locales/",
+     "lib/just-datetime-picker/locales/pl.yml",
+     "lib/just-datetime-picker/locales/en.yml",
      "lib/just-datetime-picker/",
      "lib/just-datetime-picker/activerecord.rb",
      "lib/just-datetime-picker/core.rb",
-     "lib/just-datetime-picker/formtastic-input.rb" ]
+     "lib/just-datetime-picker/formtastic-input.rb",
+     "lib/generators/", 
+     "lib/generators/just-datetime-picker/", 
+     "lib/generators/just-datetime-picker/install_generator.rb", 
+     "lib/generators/just-datetime-picker/templates/",
+     "lib/generators/just-datetime-picker/templates/just_datetime.css" ]
      
   s.require_paths = ["lib"]
 

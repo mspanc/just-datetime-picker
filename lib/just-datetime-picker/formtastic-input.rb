@@ -1,5 +1,5 @@
-module Just
-  module DateTime
+module Formtastic
+  module Inputs
     class JustDatetimePickerInput 
       include ::Formtastic::Inputs::Base
 
@@ -39,3 +39,5 @@ module Just
     end
   end
 end
+
+

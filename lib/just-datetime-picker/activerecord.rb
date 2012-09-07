@@ -17,7 +17,7 @@ module Just
       
       module ClassMethods
         def just_define_datetime_picker(field_name, options = {})
-          include Just::DateTime::Field::InstanceMethods
+          include ::Just::DateTime::ActiveRecord::InstanceMethods
           
           attr_reader "#{field_name}_time_hour"
           attr_reader "#{field_name}_time_minute"
@@ -93,4 +93,4 @@ module Just
   end
 end
 
-ActiveRecord::Base.send :include, Just::DateTime::Field
+ActiveRecord::Base.send :include, Just::DateTime::ActiveRecord

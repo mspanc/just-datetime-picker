@@ -1,0 +1,86 @@
+= Introduction
+
+This is a simple gem for Active Admin that just add support for Date/Time picker.
+
+= Usage
+
+== Code samples
+
+Here comes a quick code sample. Sorry, currently no docs.
+
+That should create nice date/time picker for User#born_at.
+
+=== Migration
+
+  class CreateUsers < ActiveRecord::Migration
+    def change
+      create_table :users do |t|
+        t.datetime  :born_at
+        
+        t.timestamps
+      end
+      
+    end
+  end
+
+=== Model
+
+  class User < ActiveRecord::Base
+    just_define_datetime_picker :born_at, :add_to_attr_accessible => true
+    validates :born_at, :presence => true
+  end
+
+=== ActiveAdmin
+
+  ActiveAdmin.register User do
+    form do |f|
+      f.inputs do
+        f.input :born_at, :as => :just_datetime_picker
+      end
+
+      f.buttons
+    end    
+  end
+  
+
+
+= Installation
+
+=== Ruby Versions
+
+Code was tested with ruby-1.9.3-p194 [ amd64 ] under RVM.
+
+It was tested with ActiveAdmin[http://www.activeadmin.info] 0.5.0 and formtastic[https://github.com/justinfrench/formtastic] 2.2.1.
+
+=== Gems
+
+The gems are hosted at Rubygems.org[http://rubygems.org]. Make sure you're
+using the latest version of rubygems:
+
+  $ gem update --system
+
+Then you can install the gem as follows:
+
+  $ gem install just-datetime-picker
+
+=== Bundler
+
+Add to your Gemfile:
+
+  gem "just-datetime-picker", "~> 0.0.1"
+
+and then type:
+
+  bundle install
+
+=== From the GitHub source
+
+The source code is available at https://github.com/saepia/just-datetime-picker.
+You can either clone the git repository or download a tarball or zip file.
+Once you have the source, you can unpack it and use from wherever you downloaded.
+
+= ChangeLog
+
+=== 0.0.1
+
+* Initial release
