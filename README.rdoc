@@ -2,7 +2,7 @@
 
 This is a simple gem for Active Admin that just add support for Date/Time picker.
 
-<img src=https://raw.github.com/saepia/just-datetime-picker/master/doc/just-datetime-picker.png />
+Screenshot[https://raw.github.com/saepia/just-datetime-picker/master/doc/just-datetime-picker.png]
 
 = Usage
 
