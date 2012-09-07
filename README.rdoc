@@ -43,8 +43,9 @@ That should create nice date/time picker for User#born_at.
   end
   
 
-
 = Installation
+
+== Code itself
 
 === Ruby Versions
 
@@ -78,6 +79,28 @@ and then type:
 The source code is available at https://github.com/saepia/just-datetime-picker.
 You can either clone the git repository or download a tarball or zip file.
 Once you have the source, you can unpack it and use from wherever you downloaded.
+
+== Assets
+
+You can try to run rails g just:date_time:install to install default CSS, 
+but I found that methods sometimes does not work. In such case, just append
+the following to your CSS:
+
+  .input.just_datetime_picker input.just-datetime-picker-field {
+    width: auto !important;
+  }
+
+  .input.just_datetime_picker input.just-datetime-picker-date {
+    margin-right: 2ex;
+  }
+
+  .input.just_datetime_picker input.just-datetime-picker-time-hour {
+    margin-right: 1ex;
+  }
+
+  .input.just_datetime_picker input.just-datetime-picker-time-minute {
+    margin-left: 1ex;
+  }
 
 = ChangeLog
 
