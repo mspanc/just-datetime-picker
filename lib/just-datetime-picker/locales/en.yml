@@ -1,0 +1,7 @@
+pl:
+  activerecord:
+    errors:
+      messages:
+        just_datetime_invalid_date: "Invalid date"
+        just_datetime_invalid_time_hour: "Invalid hour"
+        just_datetime_invalid_time_minute: "Invalid minutes"
