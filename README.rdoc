@@ -1,6 +1,6 @@
 = Introduction
 
-This is a simple gem for Active Admin that just add support for Date/Time picker.
+This is a simple gem for Active Admin that just adds support for Date/Time picker.
 
 Screenshot[https://raw.github.com/saepia/just-datetime-picker/master/doc/just-datetime-picker.png]
 
