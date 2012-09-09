@@ -22,9 +22,9 @@ module Just
           attr_reader "#{field_name}_time_hour"
           attr_reader "#{field_name}_time_minute"
           
-          validates "#{field_name}_date",        :just_date => true
-          validates "#{field_name}_time_hour",   :numericality => { :only_integer => true, :greater_than_or_equal_to => 0, :less_than_or_equal_to => 23, :message => :just_datetime_invalid_time_hour }
-          validates "#{field_name}_time_minute", :numericality => { :only_integer => true, :greater_than_or_equal_to => 0, :less_than_or_equal_to => 59, :message => :just_datetime_invalid_time_minute }
+          validates "#{field_name}_date",        :just_date => true, :allow_nil => true, :allow_blank => false
+          validates "#{field_name}_time_hour",   :numericality => { :only_integer => true, :greater_than_or_equal_to => 0, :less_than_or_equal_to => 23, :message => :just_datetime_invalid_time_hour }, :allow_nil => true, :allow_blank => false
+          validates "#{field_name}_time_minute", :numericality => { :only_integer => true, :greater_than_or_equal_to => 0, :less_than_or_equal_to => 59, :message => :just_datetime_invalid_time_minute }, :allow_nil => true, :allow_blank => false
 
           after_validation do 
             date_attribute   = "#{field_name}_date".to_sym

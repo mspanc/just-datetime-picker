@@ -3,7 +3,7 @@
 require 'jeweler'
 Jeweler::Tasks.new do |s|
   s.name = "just-datetime-picker"
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.authors = ["Marcin Lewandowski"]
   s.email = ["marcin@saepia.net"]
   s.summary = %q{Gem that just creates date/time picker in active admin and propably any other formtastic-based form}
