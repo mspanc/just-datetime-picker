@@ -12,7 +12,7 @@ module Just
     end
   end
 end
-
+require 'just-datetime-picker/engine'
 require 'just-datetime-picker/core'
 require 'just-datetime-picker/activerecord' if defined?(ActiveRecord::Base)
 require 'just-datetime-picker/mongoid' if defined?(Mongoid::Document)
