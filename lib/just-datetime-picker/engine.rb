@@ -1,4 +1,3 @@
-=begin
 module Just
   module DateTime
     class Engine < Rails::Engine
@@ -10,4 +9,3 @@ module Just
     end
   end
 end
-=end
