@@ -12,16 +12,16 @@ Here comes a quick code sample. Sorry, currently no docs.
 
 That should create nice date/time picker for User#born_at.
 
-=== Migration
+=== Migration if use ActiveRecord
 
   class CreateUsers < ActiveRecord::Migration
     def change
       create_table :users do |t|
         t.datetime  :born_at
-        
+
         t.timestamps
       end
-      
+
     end
   end
 
@@ -30,6 +30,13 @@ That should create nice date/time picker for User#born_at.
   class User < ActiveRecord::Base
     just_define_datetime_picker :born_at, :add_to_attr_accessible => true
     validates :born_at, :presence => true
+  end
+
+=== Mongoid
+
+  class Post
+    just_define_datetime_picker :born_at, :add_to_attr_accessible => true
+    field :born_at, type: DateTime
   end
 
 === ActiveAdmin
@@ -41,9 +48,9 @@ That should create nice date/time picker for User#born_at.
       end
 
       f.buttons
-    end    
+    end
   end
-  
+
 
 = Installation
 
@@ -79,9 +86,9 @@ Once you have the source, you can unpack it and use from wherever you downloaded
 == Assets
 
 === CSS
+If rails >= 3.1, add this line to active_admin.css.scss
 
-You can try to run rails g just:date_time:install to install default CSS, 
-but I found that method sometimes does not work. 
+  *= require just_datetime
 
 In such case, just append the following code to your CSS stylesheet:
 
@@ -119,11 +126,15 @@ You can use following script to overcome that problem:
 Code was tested with:
 
 * ruby[http://www.ruby-lang.org] 1.9.3-p194 [ amd64 ] under RVM[http://www.rvm.io],
-* ActiveAdmin[http://www.activeadmin.info] 0.5.0, 
+* ActiveAdmin[http://www.activeadmin.info] 0.5.0,
 * formtastic[https://github.com/justinfrench/formtastic] 2.2.1,
 * {Ruby on Rails}[http://www.rubyonrails.org] 3.2.8.
 
 = ChangeLog
+
+=== 0.0.3
+
+* Add mongoid support and move css file to app/assets/stylesheets
 
 === 0.0.2
 

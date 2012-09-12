@@ -5,3 +5,9 @@ pl:
         just_datetime_invalid_date: "Nieprawidłowa data"
         just_datetime_invalid_time_hour: "Nieprawidłowa godzina"
         just_datetime_invalid_time_minute: "Nieprawidłowa ilość minut"
+  mongoid:
+    errors:
+      messages:
+        just_datetime_invalid_date: "Nieprawidłowa data"
+        just_datetime_invalid_time_hour: "Nieprawidłowa godzina"
+        just_datetime_invalid_time_minute: "Nieprawidłowa ilość minut"
