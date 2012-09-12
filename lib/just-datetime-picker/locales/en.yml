@@ -5,3 +5,9 @@ en:
         just_datetime_invalid_date: "Invalid date"
         just_datetime_invalid_time_hour: "Invalid hour"
         just_datetime_invalid_time_minute: "Invalid minutes"
+  mongoid:
+    errors:
+      messages:
+        just_datetime_invalid_date: "Invalid date"
+        just_datetime_invalid_time_hour: "Invalid hour"
+        just_datetime_invalid_time_minute: "Invalid minutes"
