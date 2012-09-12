@@ -1,6 +1,7 @@
 = Introduction
 
-This is a simple gem for Active Admin that just adds support for Date/Time picker.
+This is a simple gem for {Active Admin}[http://www.activeadmin.infp] that just 
+adds support for Date/Time picker.
 
 Screenshot[https://raw.github.com/saepia/just-datetime-picker/master/doc/just-datetime-picker.png]
 
@@ -12,7 +13,7 @@ Here comes a quick code sample. Sorry, currently no docs.
 
 That should create nice date/time picker for User#born_at.
 
-=== Migration if use ActiveRecord
+=== Migration (if you use ActiveRecord)
 
   class CreateUsers < ActiveRecord::Migration
     def change
@@ -89,7 +90,7 @@ Once you have the source, you can unpack it and use from wherever you downloaded
 
 === CSS
 
-If rails >= 3.1, add this line to active_admin.css.scss
+If you use Rails >= 3.1 just add this line to active_admin.css.scss
 
   *= require just_datetime
 
@@ -144,16 +145,17 @@ This code is licensed under GPLv3[http://www.gnu.org/licenses/gpl.html].
 
 == ChangeLog
 
-=== 0.0.3
+=== 0.0.3 (not released yet!)
 
-* doabit[https://github.com/doabit]: Added mongoid[http://www.mongoid.org] support
-* doabit[https://github.com/doabit]: Added CSS to assets pipeline
-* doabit[https://github.com/doabit]: Added zh-CN locale
+* Added mongoid[http://www.mongoid.org] support (doabit[https://github.com/doabit])
+* Added CSS to assets pipeline (doabit[https://github.com/doabit])
+* Added zh-CN locale (doabit[https://github.com/doabit])
+* Refactored gem building stuff (doabit[https://github.com/doabit])
 
 === 0.0.2
 
-* {Marcin Lewandowski}[https://github.com/saepia]: Fixed bug that caused date/time fields' validations to always fail on record update if such field was not modified.
+* Fixed bug that caused date/time fields' validations to always fail on record update if such field was not modified ({Marcin Lewandowski}[https://github.com/saepia])
 
 === 0.0.1
 
-* {Marcin Lewandowski}[https://github.com/saepia]: Initial release
+* Initial release ({Marcin Lewandowski}[https://github.com/saepia])
