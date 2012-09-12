@@ -134,7 +134,7 @@ Code was tested with:
 
 === 0.0.3
 
-* Add mongoid support and move css file to vendor/assets/stylesheets
+* Add mongoid support and move css file to app/assets/stylesheets
 
 === 0.0.2
 

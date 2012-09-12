@@ -1,0 +1,13 @@
+zh-CN:
+  activerecord:
+    errors:
+      messages:
+        just_datetime_invalid_date: "无效的日期"
+        just_datetime_invalid_time_hour: "无效的小时"
+        just_datetime_invalid_time_minute: "无效的分钟"
+  mongoid:
+    errors:
+      messages:
+        just_datetime_invalid_date: "无效的日期"
+        just_datetime_invalid_time_hour: "无效的小时"
+        just_datetime_invalid_time_minute: "无效的分钟"
