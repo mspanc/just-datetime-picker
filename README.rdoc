@@ -27,12 +27,14 @@ That should create nice date/time picker for User#born_at.
 
 === Model
 
+==== ActiveRecord
+
   class User < ActiveRecord::Base
     just_define_datetime_picker :born_at, :add_to_attr_accessible => true
     validates :born_at, :presence => true
   end
 
-=== Mongoid
+==== Mongoid
 
   class Post
     just_define_datetime_picker :born_at, :add_to_attr_accessible => true
@@ -86,11 +88,12 @@ Once you have the source, you can unpack it and use from wherever you downloaded
 == Assets
 
 === CSS
+
 If rails >= 3.1, add this line to active_admin.css.scss
 
   *= require just_datetime
 
-In such case, just append the following code to your CSS stylesheet:
+Otherwise, just append the following code to your CSS stylesheet:
 
   .input.just_datetime_picker input.just-datetime-picker-field {
     width: auto !important;
@@ -130,16 +133,27 @@ Code was tested with:
 * formtastic[https://github.com/justinfrench/formtastic] 2.2.1,
 * {Ruby on Rails}[http://www.rubyonrails.org] 3.2.8.
 
-= ChangeLog
+== License
+
+This code is licensed under GPLv3[http://www.gnu.org/licenses/gpl.html].
+
+== Authors
+
+* {Marcin Lewandowski}[https://github.com/saepia]
+* doabit[https://github.com/doabit]
+
+== ChangeLog
 
 === 0.0.3
 
-* Add mongoid support and move css file to app/assets/stylesheets
+* doabit[https://github.com/doabit]: Added mongoid[http://www.mongoid.org] support
+* doabit[https://github.com/doabit]: Added CSS to assets pipeline
+* doabit[https://github.com/doabit]: Added zh-CN locale
 
 === 0.0.2
 
-* Fixed bug that caused date/time fields' validations to always fail on record update if such field was not modified.
+* {Marcin Lewandowski}[https://github.com/saepia]: Fixed bug that caused date/time fields' validations to always fail on record update if such field was not modified.
 
 === 0.0.1
 
-* Initial release
+* {Marcin Lewandowski}[https://github.com/saepia]: Initial release
