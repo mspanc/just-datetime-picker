@@ -1,5 +1,5 @@
 module Just
-  module DateTime
+  module DateTimePicker
     HOUR_MULTIPLIER   = 10000
     MINUTE_MULTIPLIER = 100
 

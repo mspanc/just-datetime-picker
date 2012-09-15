@@ -1,7 +1,7 @@
 require 'formtastic'
 
 module Just
-  module DateTime
+  module DateTimePicker
     class Railtie < ::Rails::Railtie
       config.after_initialize do
         # Add load paths straight to I18n, so engines and application can overwrite it.
@@ -12,9 +12,10 @@ module Just
     end
   end
 end
+
 require 'just-datetime-picker/engine'
 require 'just-datetime-picker/core'
-require 'just-datetime-picker/activerecord' if defined?(ActiveRecord::Base)
-require 'just-datetime-picker/mongoid' if defined?(Mongoid::Document)
+require 'just-datetime-picker/databases/common' 
+require 'just-datetime-picker/databases/activerecord' if defined?(ActiveRecord::Base)
+require 'just-datetime-picker/databases/mongoid'      if defined?(Mongoid::Document)
 require 'just-datetime-picker/formtastic-input'
-

@@ -92,36 +92,22 @@ Once you have the source, you can unpack it and use from wherever you downloaded
 
 If you use Rails >= 3.1 just add this line to active_admin.css.scss
 
-  *= require just_datetime
+  @import "just_datetime_picker/base";
 
-Otherwise, just append the following code to your CSS stylesheet:
-
-  .input.just_datetime_picker input.just-datetime-picker-field {
-    width: auto !important;
-  }
-
-  .input.just_datetime_picker input.just-datetime-picker-date {
-    margin-right: 2ex;
-  }
-
-  .input.just_datetime_picker input.just-datetime-picker-time-hour {
-    margin-right: 1ex;
-  }
-
-  .input.just_datetime_picker input.just-datetime-picker-time-minute {
-    margin-left: 1ex;
-  }
+Otherwise, just manually append the code from {this file}[[https://raw.github.com/saepia/just-datetime-picker/master/app/assets/stylesheets/just_datetime_picker/base.css] 
+to your CSS stylesheet.
 
 === JavaScript
 
 If you use nested set and dynamically create date or date/time pickers,
 they {won't be active by default due to bug in Active Admin}[https://github.com/gregbell/active_admin/issues/1651].
 
-You can use following script to overcome that problem:
+To overcome that, if you use Rails >= 3.1 just add this line to active_admin.js
 
-  $('a.button').live('click', function() {
-    $('input.datepicker:not(.hasDatepicker)').datepicker();
-  });
+  //= require just_datetime_picker/nested_form_workaround
+
+Otherwise, just manually append the code from {this file}[[https://raw.github.com/saepia/just-datetime-picker/master/app/assets/javascripts/just_datetime_picker/nested_form_workaround.js] 
+to your JS script.
 
 = Additional info
 

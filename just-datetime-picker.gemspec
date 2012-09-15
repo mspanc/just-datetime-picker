@@ -2,8 +2,8 @@
 Gem::Specification.new do |gem|
   gem.authors       = ["Marcin Lewandowski"]
   gem.email         = ["marcin@saepia.net"]
-  gem.description   = %q{Gem that just creates date/time picker in active admin and propably any other formtastic-based form}
-  gem.summary       = %q{Gem that just creates date/time picker in active admin and propably any other formtastic-based form}
+  gem.description   = %q{Gem that just creates date/time picker in Active Admin forms}
+  gem.summary       = %q{Gem that just creates date/time picker in Active Admin forms}
   gem.homepage      = "https://github.com/saepia/just-datetime-picker"
 
   gem.files         = `git ls-files`.split($\)
@@ -13,4 +13,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = '0.0.3'
   gem.add_dependency 'formtastic', '>= 2.0.0'
+  gem.add_dependency 'activeadmin', '>= 0.5.0'
 end
