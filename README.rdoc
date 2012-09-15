@@ -134,7 +134,6 @@ This code is licensed under GPLv3[http://www.gnu.org/licenses/gpl.html].
 === 0.0.3 (not released yet!)
 
 * Added mongoid[http://www.mongoid.org] support (doabit[https://github.com/doabit])
-* Added CSS to assets pipeline (doabit[https://github.com/doabit])
 * Added zh-CN locale (doabit[https://github.com/doabit])
 * Refactored gem building stuff (doabit[https://github.com/doabit])
 * Refactored CSS and JS to use total power of assets pipeline ({Marcin Lewandowski}[https://github.com/saepia])
