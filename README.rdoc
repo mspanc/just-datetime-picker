@@ -138,10 +138,10 @@ This code is licensed under GPLv3[http://www.gnu.org/licenses/gpl.html].
 * Added zh-CN locale (doabit[https://github.com/doabit])
 * Refactored gem building stuff (doabit[https://github.com/doabit])
 
-=== 0.0.2
+=== 0.0.2 (September 9, 2012)
 
 * Fixed bug that caused date/time fields' validations to always fail on record update if such field was not modified ({Marcin Lewandowski}[https://github.com/saepia])
 
-=== 0.0.1
+=== 0.0.1 (September 7, 2012)
 
 * Initial release ({Marcin Lewandowski}[https://github.com/saepia])
