@@ -94,7 +94,7 @@ If you use Rails >= 3.1 just add this line to active_admin.css.scss
 
   @import "just_datetime_picker/base";
 
-Otherwise, just manually append the code from {this file}[[https://raw.github.com/saepia/just-datetime-picker/master/app/assets/stylesheets/just_datetime_picker/base.css] 
+Otherwise, just manually append the code from {this file}[https://raw.github.com/saepia/just-datetime-picker/master/app/assets/stylesheets/just_datetime_picker/base.css] 
 to your CSS stylesheet.
 
 === JavaScript
@@ -106,7 +106,7 @@ To overcome that, if you use Rails >= 3.1 just add this line to active_admin.js
 
   //= require just_datetime_picker/nested_form_workaround
 
-Otherwise, just manually append the code from {this file}[[https://raw.github.com/saepia/just-datetime-picker/master/app/assets/javascripts/just_datetime_picker/nested_form_workaround.js] 
+Otherwise, just manually append the code from {this file}[https://raw.github.com/saepia/just-datetime-picker/master/app/assets/javascripts/just_datetime_picker/nested_form_workaround.js] 
 to your JS script.
 
 = Additional info
