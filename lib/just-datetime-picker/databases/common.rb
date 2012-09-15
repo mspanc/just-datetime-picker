@@ -17,6 +17,22 @@ module Just
         end    
         
         module ClassMethods
+          # Defines attribute specified as +field_name+ as field that will
+          # be underlying storage for Just Date/Time Picker.
+          #
+          # It should accept saving values of type +ActiveSupport::TimeWithZone+.
+          #
+          # You can pass options by passing a Hash to the +options+ parameter.
+          # Currently the only supported option is +:add_to_attr_accessible+
+          # which if set to +true+ automatically calls +attr_accessible+ for
+          # attribute passed as +field_name+ and all virtual attributes created
+          # by Just Date/Time Picker.
+          #
+          # * *Arguments*    :
+          #   - +field_name+ -> attribute to turn into +Just Date/Time Picker+ storage
+          #   - +options+ -> +Hash+ with options
+          #     - +:add_to_attr_accessible+ -> call automatically attr_accessible for attributes? (+boolean+)
+          # 
           def just_define_datetime_picker(field_name, options = {})
             include ::Just::DateTimePicker::DatabaseAbstraction::Common::InstanceMethods
             
