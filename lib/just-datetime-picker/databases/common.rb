@@ -9,7 +9,11 @@ module Just
             begin
               Date.parse(value)
             rescue ArgumentError
-              record.errors[attribute] << I18n.t("activerecord.errors.messages.just_datetime_invalid_date")
+              if defined?(Mongoid) and record.class.included_modules.include? Mongoid::Document
+                record.errors[attribute] << I18n.t("mongoid.errors.messages.just_datetime_invalid_date")
+              else
+                record.errors[attribute] << I18n.t("activerecord.errors.messages.just_datetime_invalid_date")
+              end
             end
           end
         end
@@ -32,8 +36,6 @@ module Just
           #     - +:add_to_attr_accessible+ -> call automatically attr_accessible for attributes? (+boolean+)
           # 
           def self.just_define_datetime_picker(field_name, options = {})
-           # include ::Just::DateTimePicker::DatabaseAbstraction::Common::InstanceMethods
-            
             attr_reader "#{field_name}_time_hour"
             attr_reader "#{field_name}_time_minute"
             

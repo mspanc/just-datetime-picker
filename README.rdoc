@@ -45,6 +45,8 @@ That should create nice date/time picker for User#born_at.
     field :born_at, type: DateTime
     just_define_datetime_picker :born_at, :add_to_attr_accessible => true
   end
+  
+You must place "mongoid" gem BEFORE "just-datetime-picker" gem in your Gemfile!
 
 === ActiveAdmin
 
@@ -135,11 +137,11 @@ This code is licensed under GPLv3[http://www.gnu.org/licenses/gpl.html].
 
 == ChangeLog
 
-=== 0.0.3 (not released yet!)
+=== 0.0.3 (September 21, 2012)
 
-* Added mongoid[http://www.mongoid.org] support (doabit[https://github.com/doabit])
+* Added mongoid[http://www.mongoid.org] support (doabit[https://github.com/doabit] & {Marcin Lewandowski}[https://github.com/saepia])
 * Added zh-CN locale (doabit[https://github.com/doabit])
-* Refactored gem building stuff (doabit[https://github.com/doabit])
+* Refactored gem building stuff (doabit[https://github.com/doabit] & {Marcin Lewandowski}[https://github.com/saepia])
 * Refactored CSS and JS to use total power of assets pipeline ({Marcin Lewandowski}[https://github.com/saepia])
 
 === 0.0.2 (September 9, 2012)

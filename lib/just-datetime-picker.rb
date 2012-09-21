@@ -13,11 +13,10 @@ module Just
   end
 end
 
-#echo Mongoid.inspect
 
 require 'just-datetime-picker/engine'
 require 'just-datetime-picker/core'
 require 'just-datetime-picker/databases/common' 
 require 'just-datetime-picker/databases/activerecord' if defined?(ActiveRecord::Base)
-#require 'just-datetime-picker/databases/mongoid'      if defined?(Mongoid::Document)
+require 'just-datetime-picker/databases/mongoid'      if defined?(Mongoid::Document)
 require 'just-datetime-picker/formtastic-input'
