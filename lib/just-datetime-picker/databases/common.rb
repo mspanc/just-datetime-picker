@@ -2,6 +2,8 @@ module Just
   module DateTimePicker
     module DatabaseAbstraction
       module Common
+        extend ActiveSupport::Concern
+        
         class JustDateValidator < ActiveModel::EachValidator
           def validate_each(record, attribute, value)
             begin
@@ -12,11 +14,7 @@ module Just
           end
         end
 
-        def self.included(mod)
-          mod.extend(ClassMethods)
-        end    
-        
-        module ClassMethods
+        included do
           # Defines attribute specified as +field_name+ as field that will
           # be underlying storage for Just Date/Time Picker.
           #
@@ -33,8 +31,8 @@ module Just
           #   - +options+ -> +Hash+ with options
           #     - +:add_to_attr_accessible+ -> call automatically attr_accessible for attributes? (+boolean+)
           # 
-          def just_define_datetime_picker(field_name, options = {})
-            include ::Just::DateTimePicker::DatabaseAbstraction::Common::InstanceMethods
+          def self.just_define_datetime_picker(field_name, options = {})
+           # include ::Just::DateTimePicker::DatabaseAbstraction::Common::InstanceMethods
             
             attr_reader "#{field_name}_time_hour"
             attr_reader "#{field_name}_time_minute"
@@ -85,11 +83,7 @@ module Just
               attr_accessible "#{field_name}_date".to_sym, "#{field_name}_time_hour".to_sym, "#{field_name}_time_minute".to_sym
             end
           end # just_define_datetime_picker
-          
-        end # ClassMethods
 
-        
-        module InstanceMethods
           protected
           def just_combine_datetime(field_name)
             if not instance_variable_get("@#{field_name}_date").nil? and not instance_variable_get("@#{field_name}_time_hour").nil? and not instance_variable_get("@#{field_name}_time_minute").nil?
@@ -104,8 +98,11 @@ module Just
             end
 
           end          
+
+          
+        end # included
+
         
-        end # InstanceMethods
       end
     end
   end

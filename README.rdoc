@@ -3,6 +3,9 @@
 This is a simple gem for {Active Admin}[http://www.activeadmin.infp] that just 
 adds support for Date/Time picker.
 
+It supports both ActiveRecord for relational databases and {Mongoid}[http://www.mongoid.org] 
+for {MongoDB}[http://www.mongodb.org] schemaless database.
+
 Screenshot[https://raw.github.com/saepia/just-datetime-picker/master/doc/just-datetime-picker.png]
 
 = Usage
@@ -37,9 +40,10 @@ That should create nice date/time picker for User#born_at.
 
 ==== Mongoid
 
-  class Post
-    just_define_datetime_picker :born_at, :add_to_attr_accessible => true
+  class User
+    include Mongoid::Document
     field :born_at, type: DateTime
+    just_define_datetime_picker :born_at, :add_to_attr_accessible => true
   end
 
 === ActiveAdmin
