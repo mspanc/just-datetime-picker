@@ -122,7 +122,7 @@ to your JS script.
 Code was tested with:
 
 * ruby[http://www.ruby-lang.org] 1.9.3-p194 [ amd64 ] under RVM[http://www.rvm.io],
-* ActiveAdmin[http://www.activeadmin.info] 0.5.0,
+* ActiveAdmin[http://www.activeadmin.info] 0.4.4 and 0.5.0,
 * formtastic[https://github.com/justinfrench/formtastic] 2.2.1,
 * {Ruby on Rails}[http://www.rubyonrails.org] 3.2.8.
 
@@ -136,6 +136,10 @@ This code is licensed under GPLv3[http://www.gnu.org/licenses/gpl.html].
 * doabit[https://github.com/doabit]
 
 == ChangeLog
+
+=== 0.0.5 (September 28, 2012)
+
+* Changed dependency of ActiveAdmin 0.5.0 to 0.4.4 ({Marcin Lewandowski}[https://github.com/saepia])
 
 === 0.0.4 (September 28, 2012)
 

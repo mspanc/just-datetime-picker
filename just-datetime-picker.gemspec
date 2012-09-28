@@ -11,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "just-datetime-picker"
   gem.require_paths = ["lib"]
-  gem.version       = '0.0.4'
+  gem.version       = '0.0.5'
   gem.add_dependency 'formtastic', '>= 2.0.0'
-  gem.add_dependency 'activeadmin', '>= 0.5.0'
+  gem.add_dependency 'activeadmin', '>= 0.4.4'
 end
