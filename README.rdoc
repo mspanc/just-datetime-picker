@@ -137,6 +137,10 @@ This code is licensed under GPLv3[http://www.gnu.org/licenses/gpl.html].
 
 == ChangeLog
 
+=== 0.0.4 (September 28, 2012)
+
+* Fixed bug that caused "Invalid date" error if date field was empty which effectively made all date/time picker fields required, even if there were no associated validations ({Marcin Lewandowski}[https://github.com/saepia])
+
 === 0.0.3 (September 21, 2012)
 
 * Added mongoid[http://www.mongoid.org] support (doabit[https://github.com/doabit] & {Marcin Lewandowski}[https://github.com/saepia])

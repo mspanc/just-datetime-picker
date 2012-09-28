@@ -6,6 +6,9 @@ module Just
         
         class JustDateValidator < ActiveModel::EachValidator
           def validate_each(record, attribute, value)
+            return if value.nil?
+            return if value.to_s.empty?
+            
             begin
               Date.parse(value)
             rescue ArgumentError
@@ -66,16 +69,22 @@ module Just
             end
 
             define_method "#{field_name}_date=" do |v|
+              return if v.to_s.empty?
+              
               instance_variable_set("@#{field_name}_date", v)
               just_combine_datetime field_name
             end
 
             define_method "#{field_name}_time_hour=" do |v|
+              return if v.to_s.empty?
+
               instance_variable_set("@#{field_name}_time_hour", v.to_i)
               just_combine_datetime field_name
             end
             
             define_method "#{field_name}_time_minute=" do |v|
+              return if v.to_s.empty?
+
               instance_variable_set("@#{field_name}_time_minute", v.to_i)
               just_combine_datetime field_name
             end
