@@ -96,12 +96,14 @@ Once you have the source, you can unpack it and use from wherever you downloaded
 
 === CSS
 
-If you use Rails >= 3.1 just add this line to active_admin.css.scss
+If you use Rails >= 3.1 AND ActiveAdmin >= 0.5.0 just add this line to active_admin.css.scss
 
   @import "just_datetime_picker/base";
 
 Otherwise, just manually append the code from {this file}[https://raw.github.com/saepia/just-datetime-picker/master/app/assets/stylesheets/just_datetime_picker/base.css] 
 to your CSS stylesheet.
+
+In ActiveAdmin 0.4.x you must strip body.active_admin from CSS declarations.
 
 === JavaScript
 
