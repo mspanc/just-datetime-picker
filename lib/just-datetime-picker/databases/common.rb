@@ -97,6 +97,9 @@ module Just
 
           protected
           def just_combine_datetime(field_name)
+            if instance_variable_get("@#{field_name}_date").nil?
+                self.send("#{field_name}=", '')
+            end
             if not instance_variable_get("@#{field_name}_date").nil? and not instance_variable_get("@#{field_name}_time_hour").nil? and not instance_variable_get("@#{field_name}_time_minute").nil?
 
               combined = "#{instance_variable_get("@#{field_name}_date")} #{sprintf("%02d", instance_variable_get("@#{field_name}_time_hour"))}:#{sprintf("%02d", instance_variable_get("@#{field_name}_time_minute"))}:00"
