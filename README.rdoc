@@ -1,6 +1,6 @@
 = Introduction
 
-This is a simple gem for {Active Admin}[http://www.activeadmin.infp] that just 
+This is a simple gem for {Active Admin}[http://www.activeadmin.info] that just 
 adds support for Date/Time picker.
 
 It supports both ActiveRecord for relational databases and {Mongoid}[http://www.mongoid.org] 
@@ -123,10 +123,10 @@ to your JS script.
 
 Code was tested with:
 
-* ruby[http://www.ruby-lang.org] 1.9.3-p194 [ amd64 ] under RVM[http://www.rvm.io],
-* ActiveAdmin[http://www.activeadmin.info] 0.4.4 and 0.5.0,
+* ruby[http://www.ruby-lang.org] 1.9.3-p194 [ amd64 ] and 1.9.3p286 [ i386 ] under RVM[http://www.rvm.io],
+* ActiveAdmin[http://www.activeadmin.info] 0.4.4, 0.5.0 and 0.5.1,
 * formtastic[https://github.com/justinfrench/formtastic] 2.2.1,
-* {Ruby on Rails}[http://www.rubyonrails.org] 3.2.8.
+* {Ruby on Rails}[http://www.rubyonrails.org] 3.2.8, 3.2.11.
 
 == License
 
@@ -138,6 +138,10 @@ This code is licensed under GPLv3[http://www.gnu.org/licenses/gpl.html].
 * doabit[https://github.com/doabit]
 
 == ChangeLog
+
+=== 0.0.6 (not released yet)
+
+* Fixed nested form workaround - do not use obsolete jQuery live() syntax ({Marcin Lewandowski}[https://github.com/saepia])
 
 === 0.0.5 (September 28, 2012)
 
