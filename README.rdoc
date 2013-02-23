@@ -6,6 +6,8 @@ adds support for Date/Time picker.
 It supports both ActiveRecord for relational databases and {Mongoid}[http://www.mongoid.org] 
 for {MongoDB}[http://www.mongodb.org] schemaless database.
 
+For Time picker widget, see {just-time-picker}[https://github.com/saepia/just-time-picker].
+
 Screenshot[https://raw.github.com/saepia/just-datetime-picker/master/doc/just-datetime-picker.png]
 
 = Usage
