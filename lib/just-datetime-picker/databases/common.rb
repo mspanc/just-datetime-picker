@@ -69,26 +69,34 @@ module Just
             end
 
             define_method "#{field_name}_date=" do |v|
-              return if v.to_s.empty?
+              if v.to_s.empty?
+                instance_variable_set("@#{field_name}_date", nil)
+              else
+                instance_variable_set("@#{field_name}_date", v)
+              end
               
-              instance_variable_set("@#{field_name}_date", v)
               just_combine_datetime field_name
             end
 
             define_method "#{field_name}_time_hour=" do |v|
-              return if v.to_s.empty?
-
-              instance_variable_set("@#{field_name}_time_hour", v.to_i)
+              if v.to_s.empty?
+                instance_variable_set("@#{field_name}_time_hour", nil)
+              else
+                instance_variable_set("@#{field_name}_time_hour", v.to_i)
+              end
+              
               just_combine_datetime field_name
             end
             
             define_method "#{field_name}_time_minute=" do |v|
-              return if v.to_s.empty?
-
-              instance_variable_set("@#{field_name}_time_minute", v.to_i)
+              if v.to_s.empty?
+                instance_variable_set("@#{field_name}_time_minute", nil)
+              else
+                instance_variable_set("@#{field_name}_time_minute", v.to_i)
+              end
+              
               just_combine_datetime field_name
             end
-            
             
             if options.has_key? :add_to_attr_accessible and options[:add_to_attr_accessible] == true
               attr_accessible "#{field_name}_date".to_sym, "#{field_name}_time_hour".to_sym, "#{field_name}_time_minute".to_sym
@@ -96,6 +104,18 @@ module Just
           end # just_define_datetime_picker
 
           protected
+
+          # Combines values passed to individual fields (date, hour and minutes) into syntax acceptable by DB.
+          #
+          # It performs validation by trying to parse combined time. In case of error it just logs warning.
+          # In such case, stored date/time remains unchanged.
+          #
+          # It performs and tries to store the value only if all components (date, hour and minutes) are set.
+          # Otherwise it checks the opposite - if maybe all values are nil, and then sets NULL in the DB if
+          # this condition is true.
+          #
+          # * *Arguments*    :
+          #   - +field_name+ -> attribute that is used to represent +Just Date/Time Picker+ storage
           def just_combine_datetime(field_name)
             if not instance_variable_get("@#{field_name}_date").nil? and not instance_variable_get("@#{field_name}_time_hour").nil? and not instance_variable_get("@#{field_name}_time_minute").nil?
 
@@ -106,11 +126,11 @@ module Just
               rescue ArgumentError
                 logger.warn "Just error while trying to set #{field_name} attribute: \"#{combined}\" is not valid date/time"
               end
+            
+            elsif instance_variable_get("@#{field_name}_date").nil? and instance_variable_get("@#{field_name}_time_hour").nil? and instance_variable_get("@#{field_name}_time_minute").nil?
+              self.send("#{field_name}=", nil)              
             end
-
-          end          
-
-          
+          end
         end # included
 
         

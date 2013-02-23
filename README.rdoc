@@ -12,9 +12,11 @@ Screenshot[https://raw.github.com/saepia/just-datetime-picker/master/doc/just-da
 
 == Code samples
 
-Here comes a quick code sample. Sorry, currently no docs.
+Here comes a quick code sample. Sorry, currently no detailed docs.
 
-That should create nice date/time picker for User#born_at.
+That should create nice date/time picker for User#born_at. Associated column in the DB should be nullable.
+
+To delete previously stored date/time just make all fields blank (date, hour and minute).
 
 === Migration (if you use ActiveRecord)
 
