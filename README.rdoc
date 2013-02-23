@@ -139,9 +139,10 @@ This code is licensed under GPLv3[http://www.gnu.org/licenses/gpl.html].
 
 == ChangeLog
 
-=== 0.0.6 (not released yet)
+=== 0.0.6 (February 23, 2013)
 
 * Fixed nested form workaround - do not use obsolete jQuery live() syntax ({Marcin Lewandowski}[https://github.com/saepia])
+* Allow to set date time to null value (thanks to {yaoquan}[https://github.com/yaoquan] for pointing this out)
 
 === 0.0.5 (September 28, 2012)
 
