@@ -8,10 +8,9 @@ module Formtastic
       end
 
       def hour_options
-          return ("00".."23") if options[:hours_24]
           am = I18n.t("time.period.am")
           pm = I18n.t("time.period.pm")
-          {
+          return {
               "12 #{am}" => "00",
               "1 #{am}"  => "01",
               "2 #{am}"  => "02",
@@ -36,7 +35,8 @@ module Formtastic
               "9 #{pm}"  => "21",
               "10 #{pm}" => "22",
               "11 #{pm}" => "23",
-          }
+          } if options[:hours_12]
+          ("00".."23")
       end
 
       def minute_options
