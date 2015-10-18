@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |gem|
-  gem.authors       = ["Marcin Lewandowski", "doabit"]
+  gem.authors       = ["Marcin Lewandowski", "doabit", "Samuel Vega Caballero"]
   gem.email         = ["marcin@saepia.net"]
   gem.description   = %q{Gem that just creates date/time picker in Active Admin forms}
   gem.summary       = %q{Gem that just creates date/time picker in Active Admin forms}
