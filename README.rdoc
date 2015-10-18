@@ -143,6 +143,11 @@ This code is licensed under GPLv3[http://www.gnu.org/licenses/gpl.html].
 
 == ChangeLog
 
+=== 0.0.7 (unreleased)
+
+* Added es locale (svegaca[https://github.com/svegaca])
+
+
 === 0.0.6 (February 23, 2013)
 
 * Fixed nested form workaround - do not use obsolete jQuery live() syntax ({Marcin Lewandowski}[https://github.com/saepia])
