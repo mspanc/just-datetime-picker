@@ -138,7 +138,7 @@ This code is licensed under GPLv3[http://www.gnu.org/licenses/gpl.html].
 
 == Authors
 
-{Marcin Lewandowski}[https://github.com/saepia], doabit[https://github.com/doabit], svegaca[https://github.com/svegaca]
+{Marcin Lewandowski}[https://github.com/saepia], doabit[https://github.com/doabit], {Samuel Vega Caballero}[https://github.com/svegaca]
 
 == ChangeLog
 
