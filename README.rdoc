@@ -140,6 +140,7 @@ This code is licensed under GPLv3[http://www.gnu.org/licenses/gpl.html].
 
 * {Marcin Lewandowski}[https://github.com/saepia]
 * doabit[https://github.com/doabit]
+* {Johannes Gorset}[https://github.com/jgorset]
 
 == ChangeLog
 
