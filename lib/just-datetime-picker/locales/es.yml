@@ -1,0 +1,13 @@
+es:
+  activerecord:
+    errors:
+      messages:
+        just_datetime_invalid_date: "Fecha no es válida"
+        just_datetime_invalid_time_hour: "Hora no es válida"
+        just_datetime_invalid_time_minute: "Minutos no son válidos"
+  mongoid:
+    errors:
+      messages:
+        just_datetime_invalid_date: "Fecha no es válida"
+        just_datetime_invalid_time_hour: "Hora no es válida"
+        just_datetime_invalid_time_minute: "Minutos no son válidos"
