@@ -142,7 +142,7 @@ This code is licensed under GPLv3[http://www.gnu.org/licenses/gpl.html].
 
 == ChangeLog
 
-=== 0.0.7 (unreleased)
+=== 0.0.7 (February 10, 2016)
 
 * Added ja and zh-TW locales {yhirano}[https://github.com/yhirano55]
 * Added es locale (svegaca[https://github.com/svegaca])
