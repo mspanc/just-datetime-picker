@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    errors:
+      messages:
+        just_datetime_invalid_date: "は正しい形式で入力してください。"
+        just_datetime_invalid_time_hour: "は正しい形式で入力してください。"
+        just_datetime_invalid_time_minute: "は正しい形式で入力してください。"
+  mongoid:
+    errors:
+      messages:
+        just_datetime_invalid_date: "は正しい形式で入力してください。"
+        just_datetime_invalid_time_hour: "は正しい形式で入力してください。"
+        just_datetime_invalid_time_minute: "は正しい形式で入力してください。"
