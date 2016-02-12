@@ -2,15 +2,23 @@ body.active_admin .input.just_datetime_picker input.just-datetime-picker-field {
   width: auto !important;
 }
 
+body.active_admin .input.just_datetime_picker input[type=number].just-datetime-picker-field {
+  width: 3em !important;
+}
+
 body.active_admin .input.just_datetime_picker input.just-datetime-picker-date {
   margin-right: 2ex;
 }
 
-body.active_admin .input.just_datetime_picker input.just-datetime-picker-time-hour {
+body.active_admin .input.just_datetime_picker input.just-datetime-picker-time-hour,
+body.active_admin .input.just_datetime_picker select.just-datetime-picker-time-hour 
+{
   margin-right: 1ex;
 }
 
-body.active_admin .input.just_datetime_picker input.just-datetime-picker-time-minute {
+body.active_admin .input.just_datetime_picker input.just-datetime-picker-time-minute,
+body.active_admin .input.just_datetime_picker select.just-datetime-picker-time-minute
+{
   margin-left: 1ex;
 }
 
