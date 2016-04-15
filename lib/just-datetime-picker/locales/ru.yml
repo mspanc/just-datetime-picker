@@ -1,0 +1,13 @@
+en:
+  activerecord:
+    errors:
+      messages:
+        just_datetime_invalid_date: "Неправильная дата"
+        just_datetime_invalid_time_hour: "Неправильное количество часов"
+        just_datetime_invalid_time_minute: "Неправильное количество минут"
+  mongoid:
+    errors:
+      messages:
+        just_datetime_invalid_date: "Неправильная дата"
+        just_datetime_invalid_time_hour: "Неправильное количество часов"
+        just_datetime_invalid_time_minute: "Неправильное количество минут"
