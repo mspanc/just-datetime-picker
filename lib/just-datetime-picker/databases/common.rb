@@ -124,7 +124,7 @@ module Just
                 self.send("#{field_name}=", Time.zone.parse(combined))
 
               rescue ArgumentError
-                logger.warn "Just error while trying to set #{field_name} attribute: \"#{combined}\" is not valid date/time"
+                ::Rails.logger.warn "Just error while trying to set #{field_name} attribute: \"#{combined}\" is not valid date/time"
               end
             
             elsif instance_variable_get("@#{field_name}_date").nil? and instance_variable_get("@#{field_name}_time_hour").nil? and instance_variable_get("@#{field_name}_time_minute").nil?
